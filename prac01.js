@@ -1,33 +1,37 @@
-var sizes = [
-  [60, 50],
-  [40, 70],
-  [50, 30],
-  [80, 40],
-];
-
 function solution(sizes) {
-  var wmaxsize = 0;
-  var hmaxsize = 0;
+  let biggerSideMax = 0;
+  let smallerSideMax = 0;
 
   for (let i = 0; i < sizes.length; i++) {
-    let a = sizes[i][0];
-    let b = sizes[i][1];
-
-    if (a > b) {
-      if (a > wmaxsize) {
-        wmaxsize = a;
+    // sizes의 변수들을 반복문으로 돌려준다.
+    if (sizes[i][0] > sizes[i][1]) {
+      if (sizes[i][0] > biggerSideMax) {
+        biggerSideMax = sizes[i][0];
       }
-      if (b > hmaxsize) {
-        hmaxsize = b;
+      //  sizes 원소 중 큰값이 긴 변에 해당하고 그 값이 긴변의최대값 보다 크면 큰변의맥스값으로 할당한다.
+      if (sizes[i][1] > smallerSideMax) {
+        smallerSideMax = sizes[i][1];
       }
+      // sizes 원소 중 작은값이 작은 변에 해당하고 그 그 값이 작은변의최대값 보다 크면 작은변의 맥스값으로 할당한다.
     } else {
-      if (a > hmaxsize) {
-        hmaxsize = a;
+      if (sizes[i][1] > biggerSideMax) {
+        biggerSideMax = sizes[i][1];
       }
-      if (b > wmaxsize) {
-        wmaxsize = b;
+      if (sizes[i][0] > smallerSideMax) {
+        smallerSideMax = sizes[i][0];
       }
     }
   }
-  console.log(a, b);
+
+  return biggerSideMax * smallerSideMax;
 }
+
+let sizes = [
+  [50, 30],
+  [40, 70],
+  [60, 50],
+  [80, 30],
+];
+
+const size = solution(sizes);
+console.log(size);
