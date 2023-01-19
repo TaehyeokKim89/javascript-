@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-    <script>
-        alert("'i'm JavaScript")
-    </script>
-<body>    
-</body>
+  </head>
+  <script>
+    function pow(x, n) {
+      let result = x;
+      //아래 반복문을 통해 제곱수가 반환되는게 이해가 잘 가지 않는다.
+      for (let i = 1; i < n; i++) {
+        alert("현재 i = " + i);
+        result *= x;
+        alert(result + " * " + i + " = " + result);
+      }
+      return result;
+    }
+  </script>
+  <body></body>
 </html>
