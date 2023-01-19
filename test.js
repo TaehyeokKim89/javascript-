@@ -1,22 +1,11 @@
-function checkAge(age) {
-  if (age > 18) {
-    return true;
+function minnumber(num1, num2) {
+  if (num1 >= num2) {
+    return num2;
   } else {
-    return confirm("보호자의 동의를 받으셨나요?");
+    return num1;
   }
 }
-// if문을 사용하지 않고 동일한 동작을 하는 함수를 한 줄에 작성해보세요.
 
-// 아래 조건을 충족하는 해답 2개를 작성해야 합니다.
-
-// 물음표 연산자 ?를 사용하여 본문을 작성
-// OR 연산자 ||를 사용하여 본문을 작성
-
-// 1.
-function checkAge(age) {
-  return age > 18 ? true : confirm("보호자의 동의를 받으셨나요?");
-}
-// 2.
-function checkage(age) {
-  return age > 18 || confirm("보호자의 동의를 받으셨나요?");
+function minnumber(num1, num2) {
+  return num1 >= num2 ? num2 : bum1;
 }
