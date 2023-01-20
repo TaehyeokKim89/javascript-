@@ -4,27 +4,8 @@
     <meta charset="UTF-8"/>
     <title>Title</title>
 </head>
-<script>
-    function pow(x, n) {
-        let result = x;
-        //아래 반복문을 통해 제곱수가 반환되는게 이해가 잘 가지 않는다.
-        for (let i = 1; i < n; i++) {
-            console.log('현재 i = ' + i);
-            console.log('현재 x = ' + x);
-            result *= x;
-            console.log(result + ' = ' + x + ' 의 값을 ' + (i + 1)+ ' 번 만큼 곱한 값');
-        }
-        return result;
-    }
+    <script>
 
-    let x = prompt("x?", '');
-    let n = prompt("n?", '');
-
-    if (n < 1) {
-        alert(`${n}은 양의 정수이어야 합니다.`);
-    } else {
-        alert(pow(x, n));
-    }
-</script>
+    </script>
 <body></body>
 </html>
