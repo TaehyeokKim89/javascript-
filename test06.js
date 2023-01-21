@@ -1,10 +1,8 @@
-function solution(n) {
+function solution(numbers) {
     let answer = [];
-    for (let i = 1; i <=n; i++ )  {
-        if ( i%2 !== 0)  {
-            answer.push(i)
-        }
-    } return answer;
+    for (let i = 0; i < numbers.length; i++) {
+        answer.push(numbers[i]*2);
+    }
+    return answer;
 }
-
-console.log(solution(10));
+console.log(solution([1, 2, 3, 4, 5]))
